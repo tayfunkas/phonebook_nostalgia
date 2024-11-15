@@ -2,9 +2,11 @@
 #define CONTACT_HPP
 
 #include <string>
+#include <iostream>
+
 
 class Contact {
-    private:
+private:
     std::string     firstname;
     std::string     lastname;
     std::string     nickname;
@@ -14,7 +16,9 @@ class Contact {
 public:
         Contact();
 
-        Contact(std::string fn, std::string ln, std::string nn, std::string nmb, std::string s);
+        //Contact(std::string fn, std::string ln, std::string nn, std::string nmb, std::string s);
 
-        void   createContact(std::string fn, std::string ln, std::string nn, std::string nmb, std::string s);
-}
+        void   createContact();
+};
+
+#endif
