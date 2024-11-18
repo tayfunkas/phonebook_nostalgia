@@ -14,7 +14,7 @@ private:
     std::string     secret;
 
 public:
-        Contact();
+        //Contact();
 
         //Contact(std::string fn, std::string ln, std::string nn, std::string nmb, std::string s);
 

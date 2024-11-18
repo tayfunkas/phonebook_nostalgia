@@ -1,10 +1,12 @@
+#include "PhoneBook.hpp"
 #include "Contact.hpp"
 #include <iostream>
 
 int main() {
-    Contact contact1;
+    PhoneBook phoneBook;
+    Contact newContact;
 
-    contact1.createContact();
-    std::cout << "Contact has been created succesfully!" << std::endl;
+    newContact.createContact();
+    phoneBook.addContact(newContact);
     return (0);
 }
