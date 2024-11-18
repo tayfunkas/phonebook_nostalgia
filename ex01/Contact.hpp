@@ -18,7 +18,12 @@ public:
 
         //Contact(std::string fn, std::string ln, std::string nn, std::string nmb, std::string s);
 
-        void   createContact();
+        void            createContact();
+        std::string     getFirstName() const;
+        std::string     getLastName() const;
+        std::string     getNickName() const;  
+        std::string     getNumber() const;
+        std::string     getSecret() const; 
 };
 
 #endif

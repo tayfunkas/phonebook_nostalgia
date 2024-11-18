@@ -1,7 +1,5 @@
 #include "Contact.hpp"
 
-//Contact::Contact(){}
-
 void    Contact::createContact()
 {
     std::cout << "Enter first name : ";
@@ -19,3 +17,9 @@ void    Contact::createContact()
     std::cout << "Enter the darkest secret : ";
     std::getline(std::cin, secret);
 }
+
+std::string     Contact::getFirstName() const {return (firstname);}
+std::string     Contact::getLastName() const {return (lastname);}
+std::string     Contact::getNickName() const {return (nickname);}
+std::string     Contact::getNumber() const {return (number);}
+std::string     Contact::getSecret() const {return (secret);}
