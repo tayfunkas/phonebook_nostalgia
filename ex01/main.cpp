@@ -6,9 +6,10 @@
 int main() {
     PhoneBook phoneBook;
     std::string command;
+    std::string Strindex;
     int index;
 
-    std::cout <<"Welcome to the PhoneBook application!" << std::endl;
+    std::cout << "Welcome to the PhoneBook application!" << std::endl;
     std::cout << "Please enter a command - ADD, SEARCH, or EXIT" << std::endl;
 
     while (1)
@@ -29,15 +30,23 @@ int main() {
             {
                 phoneBook.displayContacts();
                 std::cout << "Please provide the index of the contact to see full details" << std::endl;
-                std::cin >> index;
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                if (index < 1 || index > phoneBook.getCurrentIndex())
-                {   
-                    std::cout << "Invalid Index" << std::endl;
+                std::getline(std::cin, Strindex);
+                bool isValidNumber = !Strindex.empty() && Strindex.length() == 1 && std::isdigit(Strindex[0]);
+                if (!isValidNumber)
+                {
+                    std::cout << "Invalid Index"  << std::endl;
                 }
                 else
                 {
-                    phoneBook.displaySpecificContact(index);
+                    index = std::stoi(Strindex);
+                    if (index < 1 || index > phoneBook.getCurrentIndex())
+                    {   
+                        std::cout << "Invalid Index" << std::endl;
+                    }
+                    else
+                    {
+                        phoneBook.displaySpecificContact(index);
+                    }
                 }
             }
         }

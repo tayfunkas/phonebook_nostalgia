@@ -3,6 +3,7 @@
 
 #include "Contact.hpp"
 #include <iostream>
+#include <iomanip>
 
 class PhoneBook {
 private:
@@ -14,7 +15,8 @@ public:
     void addContact(const Contact& contact);
     void displayContacts();
     void displaySpecificContact(int index);
-    int     getCurrentIndex();
+    int  getCurrentIndex();
+    std::string truncateString(const std::string& str, size_t width);
 };
 
 #endif
