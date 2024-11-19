@@ -24,7 +24,7 @@ int main() {
         }
         else if (command == "SEARCH")
         {
-            if (phoneBook.getCurrentIndex() == 0)
+            if (phoneBook.getTotalContacts() == 0)
                 std::cout << "No contact to show" << std::endl;    
             else
             {
@@ -39,7 +39,7 @@ int main() {
                 else
                 {
                     index = std::stoi(Strindex);
-                    if (index < 1 || index > phoneBook.getCurrentIndex())
+                    if (index < 1 || index > phoneBook.getTotalContacts())
                     {   
                         std::cout << "Invalid Index" << std::endl;
                     }

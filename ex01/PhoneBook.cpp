@@ -1,12 +1,14 @@
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook() : currentIndex(0) {}
+PhoneBook::PhoneBook() : currentIndex(0), totalContacts(0) {}
 
-int     PhoneBook::getCurrentIndex() {return (currentIndex);}
+int     PhoneBook::getTotalContacts() {return (totalContacts);}
 
 void    PhoneBook::addContact(const Contact& contact) {
     contacts[currentIndex] = contact;
     currentIndex = (currentIndex + 1) % 8;
+    if (totalContacts < 8)
+        totalContacts++;
     std::cout << "Contact added to phonebook" << std::endl;
 }
 
@@ -26,9 +28,7 @@ void    PhoneBook::displayContacts() {
             << std::setw(columnWidth) << "Last Name" << " | " << std::setw(columnWidth) << "Nickname" << std::endl;
     std::cout << std::string(4 * columnWidth + 10, '-') << std::endl; 
 
-    if (currentIndex >= 8)
-        currentIndex = 8;   
-    while (i < currentIndex)
+    while (i < totalContacts)
     {
         std::cout << std::setw(columnWidth) << i + 1 << " | " << std::setw(columnWidth) << truncateString(contacts[i].getFirstName(), columnWidth) 
         << " | " << std::setw(columnWidth) << truncateString(contacts[i].getLastName(), columnWidth) << " | " << std::setw(columnWidth) 
