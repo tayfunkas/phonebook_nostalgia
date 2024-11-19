@@ -28,7 +28,12 @@ void    Contact::createContact()
         std::getline(std::cin, number);
         if (number.empty())
            std::cout << "No field can be empty. Please enter a valid phone number." << std::endl;
-    } while (number.empty());
+        else if (!std::all_of(number.begin(), number.end(), ::isdigit))
+        {
+            std::cout << "Phone number must contain only digits. Please try again." << std::endl;
+            number.clear();
+        }
+    } while (number.empty() || !std::all_of(number.begin(), number.end(), ::isdigit));
 
     do {
         std::cout << "Enter the darkest secret : ";
