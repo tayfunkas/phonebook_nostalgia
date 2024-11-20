@@ -31,7 +31,7 @@ The **Nostalgic Phonebook** allows users to:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/nostalgic-phonebook.git
+   git clone https://github.com/tayfunkas/phonebook_nostalgia.git
    cd phonebook_nostalgia
    make
    ./phonebook
