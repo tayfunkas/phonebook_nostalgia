@@ -38,9 +38,9 @@ The **Nostalgic Phonebook** allows users to:
 
   Then follow the instructions that ask you for an input "ADD, SEARCH, or EXIT."
 
-<img width="704" alt="phonebook" src="https://github.com/user-attachments/assets/b53885e7-3c84-4a8d-93d1-24c5bc1c48ea">
 
-  
+  <img width="704" alt="phonebook" src="https://github.com/user-attachments/assets/4cb8523e-976c-4e12-be12-c88a79819772">
+
    
 
 
